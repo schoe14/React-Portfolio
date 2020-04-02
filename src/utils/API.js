@@ -1,78 +1,50 @@
 export default {
-    getEmployeeList: new Promise(function (resolve) {
+    getPortfolio: new Promise(function (resolve) {
         setTimeout(() => {
             resolve([
                 {
-                    id: 20660,
-                    name: "Douglas Hines",
-                    email: "d.hines@mail.com",
-                    position: "Senior Software Developer",
-                    team: "Customer Resiliency"
+                    title: "Good-Cuisine",
+                    img: "/assets/images/good-cuisine-screenshot.jpg",
+                    link: "",
+                    github: "",
+                    detail: ""
                 },
                 {
-                    id: 63477,
-                    name: "Ross Ramirez",
-                    email: "r.ramirez@mail.com",
-                    position: "Senior Software Developer",
-                    team: "Card Tech"
+                    title: "Pack-It",
+                    img: "/assets/images/pack-it-screenshot.jpg",
+                    link: "",
+                    github: "",
+                    detail: ""
                 },
                 {
-                    id: 31975,
-                    name: "Allison Moran",
-                    email: "a.moran@mail.com",
-                    position: "Junior Software Developer",
-                    team: "Card Tech"
+                    title: "Employee-Directory",
+                    img: "",
+                    link: "",
+                    github: "",
+                    detail: ""
                 },
                 {
-                    id: 81644,
-                    name: "Kara Garza",
-                    email: "k.garza@mail.com",
-                    position: "Full Stack Web Developer",
-                    team: "Web Development"
+                    title: "Budget-Trackers",
+                    img: "",
+                    link: "",
+                    github: "",
+                    detail: ""
                 },
                 {
-                    id: 57358,
-                    name: "Melba Murphy",
-                    email: "m.murphy@mail.com",
-                    position: "Senior Java Software Developer",
-                    team: "Customer Resiliency"
+                    title: "Workout-Tracker",
+                    img: "",
+                    link: "",
+                    github: "",
+                    detail: ""
                 },
                 {
-                    id: 51950,
-                    name: "Drew Hampton",
-                    email: "d.hampton@mail.com",
-                    position: "Junior Java Software Developer",
-                    team: "Card Tech"
-                },
-                {
-                    id: 31388,
-                    name: "Richard Fowler",
-                    email: "r.fowler@mail.com",
-                    position: "Applications Programmer",
-                    team: "Web Development"
-                },
-                {
-                    id: 73773,
-                    name: "Chris Austin",
-                    email: "i.austin@mail.com",
-                    position: "Database Administrator",
-                    team: "Database"
-                },
-                {
-                    id: 91333,
-                    name: "Ella Leonard",
-                    email: "e.leonard@mail.com",
-                    position: "Computer Systems Analyst",
-                    team: "Internal Support"
-                },
-                {
-                    id: 42396,
-                    name: "Lauren Stanley",
-                    email: "l.stanley@mail.com",
-                    position: "Computer Programmer",
-                    team: "Internal Support"
+                    title: "Eat-Da-Burger!",
+                    img: "/assets/images/eat-da-burger-screenshot.jpg",
+                    link: "",
+                    github: "",
+                    detail: ""
                 }
             ]);
-        }, 1000);
+        }, 500);
     })
 };

@@ -4,25 +4,53 @@ import "./style.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-        Employee Directory
+    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
+          Seohui's Portfolio
       </Link>
-      <div>
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              to="/"
-              className={
-                window.location.pathname === "/" || window.location.pathname === "/home"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Search
+        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarResponsive">
+          <ul className="navbar-nav ml-auto">
+
+            <li className="nav-item">
+              <Link
+                to="/about"
+                className={
+                  window.location.pathname === "/" || window.location.pathname === "/about"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                About
             </Link>
-          </li>
-        </ul>
+            </li>
+
+            <li className="nav-item dropdown">
+              <Link
+                to="#"
+                className={window.location.pathname === "/portfolio"
+                  ? "nav-link dropdown-toggle nav-link active"
+                  : "nav-link dropdown-toggle"
+                }
+                id="navbarDropdownPortfolio" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"
+              >
+                Portfolio
+            </Link>
+              <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <Link to="/portfolio" className="dropdown-item">Good-Cuisine</Link>
+                <Link to="/portfolio" className="dropdown-item">Pack-It</Link>
+                <Link to="/portfolio" className="dropdown-item">Employee-Directory</Link>
+              </div>
+            </li>
+
+          </ul>
+        </div>
       </div>
     </nav>
   );
