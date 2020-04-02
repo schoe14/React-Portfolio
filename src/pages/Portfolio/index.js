@@ -1,7 +1,7 @@
-import React, { useState, useEffect, } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
-import { PortfolioList, PortfolioItem } from "../../components/PortfolioItem";
+import { PortfolioList, PortfolioItem } from "../../components/PortfolioList";
 // import "./style.css";
 
 function Portfolio() {

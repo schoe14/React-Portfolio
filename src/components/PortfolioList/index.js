@@ -23,7 +23,7 @@ export function PortfolioList({ children }) {
 
 export function PortfolioItem({ title, img, link, github, detail }) {
     return (
-        <Row style={{ marginTop: "50px" }}>
+        <Row id={title ? title.toLowerCase() : ""} style={{ marginTop: "50px" }}>
             <Col size="md-7">
                 <img className="img-fluid rounded mb-3 mb-md-0" src={img} alt="" style={{ width: "700px", height: "300px" }} />
             </Col>
@@ -31,7 +31,7 @@ export function PortfolioItem({ title, img, link, github, detail }) {
                 <h3>{title}</h3>
                 <p>{detail}</p>
                 <a className="btn btn-primary" href={link}>View Project</a>
-                <a className="btn btn-primary" href={github}>Github <i class="fa fa-github"></i>
+                <a className="btn btn-primary" href={github}>Github <i className="fa fa-github"></i>
                 </a>
             </Col>
         </Row>

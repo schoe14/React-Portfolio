@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useEffect } from "react-router-dom";
 import "./style.css";
 
 function Navbar() {
+  // useEffect(() => {
+  //   $('.navbar-nav>li>a').on('click', function(){
+  //     $('.navbar-collapse').collapse('hide');
+  // });
+  // }, []);
+
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
@@ -30,7 +36,33 @@ function Navbar() {
             </Link>
             </li>
 
-            <li className="nav-item dropdown">
+            <li className="nav-item">
+              <Link
+                to="/portfolio"
+                className={
+                  window.location.pathname === "/portfolio"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Portfolio
+            </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                to="/contact"
+                className={
+                  window.location.pathname === "/contact"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Contact
+            </Link>
+            </li>
+
+            {/* <li className="nav-item dropdown">
               <Link
                 to="#"
                 className={window.location.pathname === "/portfolio"
@@ -43,11 +75,11 @@ function Navbar() {
                 Portfolio
             </Link>
               <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <Link to="/portfolio" className="dropdown-item">Good-Cuisine</Link>
-                <Link to="/portfolio" className="dropdown-item">Pack-It</Link>
-                <Link to="/portfolio" className="dropdown-item">Employee-Directory</Link>
+                <Link to="/portfolio/#good-cuisine" className="dropdown-item">Good-Cuisine</Link>
+                <Link to="/portfolio/#pack-it" className="dropdown-item">Pack-It</Link>
+                <Link to="/portfolio/#employee-directory" className="dropdown-item">Employee-Directory</Link>
               </div>
-            </li>
+            </li> */}
 
           </ul>
         </div>
