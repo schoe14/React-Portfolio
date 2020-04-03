@@ -76,16 +76,16 @@ export default {
         setTimeout(() => {
             resolve([
                 {
-                    demo: "http://placehold.it/700x400",
-                    label: "first label"
+                    demo: "assets/demo/good-cuisine-demo.GIF",
+                    label: "Good-Cuisine"
                 },
                 {
-                    demo: "http://placehold.it/700x400",
-                    label: "second label"
+                    demo: "assets/demo/pack-it-demo.GIF",
+                    label: "Pack-It"
                 },
                 {
-                    demo: "http://placehold.it/700x400",
-                    label: "third label"
+                    demo: "assets/demo/employee-directory-demo.GIF",
+                    label: "Employee-Directory"
                 }
             ])
         }, 100);

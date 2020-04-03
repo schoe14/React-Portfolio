@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
-// import API from "../../utils/API";
-import Container from "../../components/Container";
+import React from "react";
 import Jumbotron from "../../components/Jumbotron";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
+import "./style.css";
 
 export function AboutMe() {
     return (
         <Jumbotron>
-            <div>Hello. I'm <b>Seohui Choe</b> and I am a Full Stack Developer based in Richmond, VA. I enjoy
-                        creating <b>clean, technical, user-friendly</b> web applications.</div>
+            <div>Hello. I'm <b>Seohui Choe</b> and I am a Full Stack Developer based in Richmond, VA. 
+            <br></br>I enjoy creating <b>clean, technical, user-friendly</b> web applications.</div>
             <div id="hashtag"><i className="fa fa-hashtag"></i> Certified Full Stack Developer</div>
             <div id="hashtag"><i className="fa fa-hashtag"></i> A Lover of Learning</div>
             <div id="hashtag"><i className="fa fa-hashtag"></i> Analytical Mindset</div>
@@ -22,12 +21,12 @@ export function MySkills({ children, skills }) {
         <Row style={{ paddingTop: "20px" }}>
             <Col size="lg-6">
                 <h2>Technical Skills</h2>
-                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <p>My application development experiences include:</p>
                 <ul>
                     {skills.map(skill => {
-                        return <li><b>{skill[0]}:</b> {skill[1]}</li>
+                        return <li className="skills"><b>{skill[0]}:</b> {skill[1]}</li>
                     })}
-                    <li><b><i className="fa fa-heart" style={{ color: "red" }}></i></b> And <u>life-long dedication to learning!</u></li>
+                    <p className="skills"><b><i className="fa fa-heart" style={{ color: "red" }}></i></b> And <u>life-long dedication to learning!</u></p>
                 </ul>
             </Col>
             {children}
@@ -43,7 +42,6 @@ export function MyResume() {
                 <div id="resume-holder">
                 </div>
             </div>
-            {/* <img className="img-fluid rounded" src="http://placehold.it/700x450" alt="" /> */}
         </Col>
     );
 }

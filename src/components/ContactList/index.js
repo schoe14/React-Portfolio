@@ -26,7 +26,7 @@ export function ContactItem({ email, github, linkedIn, photo }) {
                 <img className="img-fluid rounded" src={photo ? photo : "http://placehold.it/700x450"} style={{ height: "250px" }} />
             </Col>
             <Col size="lg-9 mb-9">
-                <p>Email: {email}</p>
+                <h4><i className="fa fa-envelope-square"></i>: {email}</h4>
                 <a className="btn btn-primary" href={github} target="blank"><i className="fa fa-github"></i></a>
                 <a className="btn btn-primary" href={linkedIn} target="blank"><i className="fa fa-linkedin"></i></a>
             </Col>

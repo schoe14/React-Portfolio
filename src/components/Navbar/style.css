@@ -4,6 +4,7 @@ nav.navbar.navbar-default {
 
 nav {
   position: sticky;
+  width: 100%;
 }
 
 .navbar-toggler:focus, .navbar-toggler:active, button:hover {

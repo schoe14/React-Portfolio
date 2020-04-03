@@ -1,7 +1,4 @@
 import React from "react";
-import Container from "../Container";
-import Col from "../Col";
-import Row from "../Row";
 // import "./style.css";
 
 export function CarouselList({ children }) {
@@ -33,11 +30,10 @@ export function CarouselItem(props) {
                     <div className={index === 0 ? "carousel-item active" : "carousel-item"}>
                         <img src={item.demo} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
-                            <h5>{item.label}</h5>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h5 style={{color: "black"}}>{item.label}</h5>
                         </div>
                     </div>
-                )
+                );
             })}
             {/* <div className="carousel-item active">
                 <img src="http://placehold.it/700x400" className="d-block w-100" alt="..." />

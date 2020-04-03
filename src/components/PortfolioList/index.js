@@ -27,7 +27,7 @@ export function PortfolioItem({ title, img, link, github, detail }) {
             </Col>
             <Col size="md-5" id="content">
                 <h3>{title}</h3>
-                <p>{detail}</p>
+                <p className="detail">{detail}</p>
                 <a className="btn btn-primary" href={link} target="blank">Live Link</a>
                 <a className="btn btn-primary" href={github} target="blank">Github <i className="fa fa-github"></i>
                 </a>

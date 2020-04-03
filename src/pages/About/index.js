@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
-import Jumbotron from "../../components/Jumbotron";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
 import { AboutMe, MySkills, MyResume } from "../../components/AboutMe";
@@ -68,9 +67,11 @@ function About() {
           <span className="sr-only">Next</span>
         </a>
       </div> */}
-      <MySkills skills={skills}>
-        <MyResume />
-      </MySkills>
+      <Container style={{ marginTop: 30}}>
+        <MySkills skills={skills}>
+          <MyResume />
+        </MySkills>
+      </Container>
     </Container>
   );
 }
