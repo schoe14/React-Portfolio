@@ -6,6 +6,11 @@ nav {
   position: sticky;
 }
 
+.navbar-toggler:focus, .navbar-toggler:active, button:hover {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 a {
   font-family: 'PT Sans', sans-serif;
 }

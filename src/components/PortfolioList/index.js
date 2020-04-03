@@ -7,9 +7,7 @@ import "./style.css";
 export function PortfolioList({ children }) {
     return (
         <Container>
-            <h1 className="mt-4 mb-3">Portfolio
-             <small>Subheading</small>
-            </h1>
+            <h1 className="mt-4 mb-3">Portfolio</h1>
             <ol className="breadcrumb">
                 <li className="breadcrumb-item">
                     <a href="/">Home</a>
@@ -30,8 +28,8 @@ export function PortfolioItem({ title, img, link, github, detail }) {
             <Col size="md-5" id="content">
                 <h3>{title}</h3>
                 <p>{detail}</p>
-                <a className="btn btn-primary" href={link}>View Project</a>
-                <a className="btn btn-primary" href={github}>Github <i className="fa fa-github"></i>
+                <a className="btn btn-primary" href={link} target="blank">Live Link</a>
+                <a className="btn btn-primary" href={github} target="blank">Github <i className="fa fa-github"></i>
                 </a>
             </Col>
         </Row>
