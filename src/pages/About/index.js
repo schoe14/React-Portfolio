@@ -12,7 +12,6 @@ function About() {
   useEffect(() => {
     API.getSkills.then((res) => {
       setSkills(res);
-      console.log(res)
     });
   }, []);
 

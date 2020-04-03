@@ -10,7 +10,6 @@ import Wrapper from "./components/Wrapper";
 function App() {
   return (
     <Router>
-      <div>
         <Navbar />
         <Wrapper>
           <Switch>
@@ -20,7 +19,6 @@ function App() {
           </Switch>
         </Wrapper>
         <Footer />
-      </div>
     </Router>
   );
 }

@@ -1,20 +1,17 @@
-import React from "react";
-import { Link, useEffect } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function Navbar() {
-  // useEffect(() => {
-  //   $('.navbar-nav>li>a').on('click', function(){
-  //     $('.navbar-collapse').collapse('hide');
-  // });
-  // }, []);
+  const [path, setPath] = useState(window.location.pathname);
+  useEffect(() => {
+    setPath(window.location.pathname);
+  }, [path]);
 
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">
-          Seohui's Portfolio
-      </Link>
+        <Link to="/" className="navbar-brand">Seohui's Portfolio</Link>
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
           data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -26,6 +23,7 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 to="/about"
+                onClick={() => setPath("/about")}
                 className={
                   window.location.pathname === "/" || window.location.pathname === "/about"
                     ? "nav-link active"
@@ -39,6 +37,7 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 to="/portfolio"
+                onClick={() => setPath("/portfolio")}
                 className={
                   window.location.pathname === "/portfolio"
                     ? "nav-link active"
@@ -52,6 +51,7 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 to="/contact"
+                onClick={() => setPath("/contact")}
                 className={
                   window.location.pathname === "/contact"
                     ? "nav-link active"
@@ -62,24 +62,24 @@ function Navbar() {
             </Link>
             </li>
 
-            {/* <li className="nav-item dropdown">
+            <li className="nav-item dropdown">
               <Link
-                to="#"
-                className={window.location.pathname === "/portfolio"
+                to="/contact"
+                className={window.location.pathname === "/contact"
                   ? "nav-link dropdown-toggle nav-link active"
                   : "nav-link dropdown-toggle"
                 }
                 id="navbarDropdownPortfolio" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false"
               >
-                Portfolio
+                Connect
             </Link>
               <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <Link to="/portfolio/#good-cuisine" className="dropdown-item">Good-Cuisine</Link>
-                <Link to="/portfolio/#pack-it" className="dropdown-item">Pack-It</Link>
-                <Link to="/portfolio/#employee-directory" className="dropdown-item">Employee-Directory</Link>
+                <a href="https://github.com/schoe14" target="blank" className="dropdown-item"><i className="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/seohui-choe-009522b6/" target="blank" className="dropdown-item"><i
+                  className="fa fa-linkedin"></i></a>
               </div>
-            </li> */}
+            </li>
 
           </ul>
         </div>

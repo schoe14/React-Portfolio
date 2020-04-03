@@ -11,7 +11,6 @@ function Contact() {
 
     useEffect(() => {
         API.getContact.then((res) => {
-            // console.log(res);
             setContact(res);
         });
     }, []);
