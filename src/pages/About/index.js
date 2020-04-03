@@ -5,13 +5,19 @@ import Jumbotron from "../../components/Jumbotron";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
 import { AboutMe, MySkills, MyResume } from "../../components/AboutMe";
+import { CarouselList, CarouselItem } from "../../components/CarouselList";
 import "./style.css";
 
 function About() {
   const [skills, setSkills] = useState([]);
+  const [carousel, setCarousel] = useState([]);
+
   useEffect(() => {
     API.getSkills.then((res) => {
       setSkills(res);
+    });
+    API.getCarouselItems.then((res) => {
+      setCarousel(res);
     });
   }, []);
 
@@ -21,7 +27,10 @@ function About() {
   return (
     <Container style={{ marginTop: 30, minHeight: "100vh" }}>
       <AboutMe />
-      <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+      <CarouselList>
+        <CarouselItem carousel={carousel} />
+      </CarouselList>
+      {/* <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -58,34 +67,10 @@ function About() {
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="sr-only">Next</span>
         </a>
-      </div>
+      </div> */}
       <MySkills skills={skills}>
         <MyResume />
       </MySkills>
-      {/* <div className="row">
-        <div className="col-lg-6">
-          <h2>Technical Skills</h2>
-          <p>The Modern Business template by Start Bootstrap includes:</p>
-          <ul>
-            <li><b>Languages:</b> Java, JavaScript/jQuery, HTML, CSS</li>
-            <li><b>CSS Framework:</b> Bootstrap, Materialize</li>
-            <li><b>Browser Based Technologies:</b> Responsive Design, Handlebars, Local Storage</li>
-            <li><b>Databases:</b> MongoDB, MySQL</li>
-            <li><b>Deployment:</b> Heroku, Git</li>
-            <li><b>Server-Side Deployment:</b> Express.js, Node.js, User Authentication</li>
-            <li><b>Other Skills:</b> Analytical Skills, Problem Solving, Time Management, Technical Mindset, Teamwork</li>
-            <li><b><i className="fa fa-heart" style={{ color: "red" }}></i></b> And <u>life-long dedication to learning!</u></li>
-          </ul>
-        </div>
-        <div className="col-lg-6">
-          <div id="resume">
-            <p id="p-header">Resume</p>
-            <div id="resume-holder">
-            </div>
-          </div>
-        </div>
-      </div> */}
-
     </Container>
   );
 }
