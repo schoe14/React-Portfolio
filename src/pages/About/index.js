@@ -1,30 +1,24 @@
 import React, { useState, useEffect } from "react";
-// import API from "../../utils/API";
+import API from "../../utils/API";
 import Container from "../../components/Container";
 import Jumbotron from "../../components/Jumbotron";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
+import { AboutMe, MySkills, MyResume } from "../../components/AboutMe";
 import "./style.css";
 
 function About() {
-
+  const [skills, setSkills] = useState([]);
   useEffect(() => {
+    API.getSkills.then((res) => {
+      setSkills(res);
+      console.log(res)
+    });
   }, []);
-
-  // const handleInputChange = event => {
-  // console.log("event.target.value: " + event.target.value)
-  // console.log("event.target.id: " + event.target.id)
-  // };
 
   return (
     <Container style={{ marginTop: 30, minHeight: "100vh" }}>
-      <Jumbotron>
-        <div>Hello. I'm <b>Seohui Choe</b> and I am a Full Stack Developer based in Richmond, VA. I enjoy
-                        creating <b>clean, technical, user-friendly</b> web applications.</div>
-        <div id="hashtag"><i className="fa fa-hashtag"></i> Certified Full Stack Developer</div>
-        <div id="hashtag"><i className="fa fa-hashtag"></i> A Lover of Learning</div>
-        <div id="hashtag"><i className="fa fa-hashtag"></i> Analytical Mindset</div>
-      </Jumbotron>
+      <AboutMe />
       <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
@@ -63,8 +57,10 @@ function About() {
           <span className="sr-only">Next</span>
         </a>
       </div>
-
-      <div className="row">
+        <MySkills skills={skills}>
+          <MyResume />
+        </MySkills>
+      {/* <div className="row">
         <div className="col-lg-6">
           <h2>Technical Skills</h2>
           <p>The Modern Business template by Start Bootstrap includes:</p>
@@ -85,9 +81,8 @@ function About() {
             <div id="resume-holder">
             </div>
           </div>
-          {/* <img className="img-fluid rounded" src="http://placehold.it/700x450" alt="" /> */}
         </div>
-      </div>
+      </div> */}
 
     </Container>
   );

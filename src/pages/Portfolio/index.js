@@ -14,11 +14,6 @@ function Portfolio() {
         });
     }, []);
 
-    // const handleInputChange = event => {
-        // console.log("event.target.value: " + event.target.value)
-        // console.log("event.target.id: " + event.target.id)
-    // };
-
     return (
         <Container style={{ marginTop: 30, minHeight: "100vh" }}>
             <PortfolioList>

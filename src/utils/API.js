@@ -58,5 +58,18 @@ export default {
                 },
             ]);
         }, 100);
-    })
+    }),
+    getSkills: new Promise(function (resolve) {
+        setTimeout(() => {
+            resolve([
+                ["Languages", "Java, JavaScript/jQuery, HTML, CSS"],
+                ["CSS Framework", "Bootstrap, Materialize"],
+                ["Browser Based Technologies", "Responsive Design, Handlebars, Local Storage"],
+                ["Databases", "MongoDB, MySQL"],
+                ["Deployment", "Heroku, Git"],
+                ["Server-Side Deployment", "Express.js, Node.js, User Authentication"],
+                ["Other Skills", "Analytical Skills, Problem Solving, Time Management, Technical Mindset, Teamwork"]
+            ]);
+        }, 100);
+    }),
 };

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
-import Jumbotron from "../../components/Jumbotron";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
 import { ContactList, ContactItem } from "../../components/ContactList";
