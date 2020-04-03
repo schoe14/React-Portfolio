@@ -15,6 +15,9 @@ function About() {
     });
   }, []);
 
+  const renderResume = () => {
+  }
+
   return (
     <Container style={{ marginTop: 30, minHeight: "100vh" }}>
       <AboutMe />
@@ -56,9 +59,9 @@ function About() {
           <span className="sr-only">Next</span>
         </a>
       </div>
-        <MySkills skills={skills}>
-          <MyResume />
-        </MySkills>
+      <MySkills skills={skills}>
+        <MyResume />
+      </MySkills>
       {/* <div className="row">
         <div className="col-lg-6">
           <h2>Technical Skills</h2>
