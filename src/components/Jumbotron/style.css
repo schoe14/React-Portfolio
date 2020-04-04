@@ -1,0 +1,7 @@
+.jumbotron {
+    align-items: center;
+    background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/buildawebsite.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+}

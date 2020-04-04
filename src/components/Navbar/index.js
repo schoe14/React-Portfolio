@@ -4,26 +4,21 @@ import "./style.css";
 
 function Navbar() {
   const [path, setPath] = useState(window.location.pathname);
-  const [toggle, setToggle] = useState("");
 
   useEffect(() => {
     setPath(window.location.pathname);
   }, [path]);
 
-  const handleToggle = () => {
-    setToggle("hide");
-  }
-
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
-        <Link to="/" className="navbar-brand">Seohui's Portfolio</Link>
+        <Link to="/" onClick={() => setPath("/")} className="navbar-brand">Seohui's Portfolio</Link>
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
           data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
           aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={`collapse navbar-collapse ${toggle}`} id="navbarResponsive">
+        <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
 
             <li className="nav-item">

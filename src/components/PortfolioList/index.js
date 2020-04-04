@@ -21,7 +21,7 @@ export function PortfolioList({ children }) {
 
 export function PortfolioItem({ title, img, link, github, detail }) {
     return (
-        <Row id={title ? title.toLowerCase() : ""} style={{ marginTop: "50px" }}>
+        <Row id="portfolio-row" style={{ marginTop: "50px" }}>
             <Col size="md-7">
                 <img className="img-fluid rounded mb-3 mb-md-0" src={img} alt="" style={{ width: "700px", height: "300px" }} />
             </Col>

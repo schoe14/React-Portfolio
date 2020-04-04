@@ -76,15 +76,15 @@ export default {
         setTimeout(() => {
             resolve([
                 {
-                    demo: "assets/demo/good-cuisine-demo.GIF",
+                    demo: "assets/demo/good-cuisine-demo.gif",
                     label: "Good-Cuisine"
                 },
                 {
-                    demo: "assets/demo/pack-it-demo.GIF",
+                    demo: "assets/demo/pack-it-demo.gif",
                     label: "Pack-It"
                 },
                 {
-                    demo: "assets/demo/employee-directory-demo.GIF",
+                    demo: "assets/demo/employee-directory-demo.gif",
                     label: "Employee-Directory"
                 }
             ])

@@ -7,11 +7,15 @@ import "./style.css";
 export function AboutMe() {
     return (
         <Jumbotron>
-            <div>Hello. I'm <b>Seohui Choe</b> and I am a Full Stack Developer based in Richmond, VA. 
-            <br></br>I enjoy creating <b>clean, technical, user-friendly</b> web applications.</div>
-            <div id="hashtag"><i className="fa fa-hashtag"></i> Certified Full Stack Developer</div>
-            <div id="hashtag"><i className="fa fa-hashtag"></i> A Lover of Learning</div>
-            <div id="hashtag"><i className="fa fa-hashtag"></i> Analytical Mindset</div>
+            <div className="text-center">
+                <div>Hello. I'm <b>Seohui Choe</b> and I am a Full Stack Developer based in Richmond, VA.
+                <br></br>I enjoy creating <b>clean, technical, user-friendly</b> web applications.</div>
+            </div>
+            <div className="text-center">
+                <div id="hashtag"><i className="fa fa-hashtag"></i> Certified Full Stack Developer</div>
+                <div id="hashtag"><i className="fa fa-hashtag"></i> A Lover of Learning</div>
+                <div id="hashtag"><i className="fa fa-hashtag"></i> Analytical Mindset</div>
+            </div>
         </Jumbotron>
     );
 }
@@ -37,9 +41,11 @@ export function MySkills({ children, skills }) {
 export function MyResume() {
     return (
         <Col size="lg-6">
-            <div id="resume">
-                <h2 id="p-header">Resume</h2>
-                <div id="resume-holder">
+            <h2>Resume</h2>
+            <div className="card">
+                <a href="assets/resume/Seohui-Choe-Resume.pdf" target="blank"><img src="assets/images/resume-thumbnail.JPG" className="d-block w-100" alt="Resume" style={{ height: "350px" }} /></a>
+                <div className="card-body">
+                    <p className="card-text"><i className="fa fa-arrow-up"></i> Click to download!</p>
                 </div>
             </div>
         </Col>

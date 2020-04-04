@@ -1,4 +1,30 @@
-.btn:focus, .btn:active {
+a {
+    color: #204151;
+}
+
+.link:hover {
+    text-decoration: none;
+    background-color: #323232;
+    color: #f1f3f4;
+}
+
+a:focus, .a:active, a:hover {
     outline: none !important;
     box-shadow: none !important;
+    text-decoration: none;
+}
+
+.story-header {
+    font-size: 18px;
+}
+
+.my-story {
+    padding-top: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+    .contact-info {
+        padding-top: 20px;
+        text-align: center;
+    }
 }
