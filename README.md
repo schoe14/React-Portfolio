@@ -4,8 +4,10 @@ It is showcase of my hard work :sparkles: and myself :raising_hand: as a Full St
 Enjoy clean, user-friendly and even fully mobile-responsive application! :+1:
 
 # Screenshots
-<img src="./public/assets/images/portfolio-screenshot-1.JPG" width= "400" height= "300" float="left">
-<img src="./public/assets/images/portfolio-screenshot-2.JPG" width= "400" height= "300" float="left">
+<p float="left">
+<img src="./public/assets/images/portfolio-screenshot-1.JPG" width= "400" height= "300">
+<img src="./public/assets/images/portfolio-screenshot-2.JPG" width= "400" height= "300">
+</p>
 
 # Tech/framework used
 * Programming Languages: JavaScript, HTML, CSS
