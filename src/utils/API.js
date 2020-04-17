@@ -17,6 +17,13 @@ export default {
                     detail: "Don't have anxiety😟 about packing for your vacation ever again. Know the weather of your travel destination and let our Pack It logic tell you what kind of clothes you'll need during your trip😃. With Pack It, it is like hiring your personal stylist!🎉"
                 },
                 {
+                    title: "Google-Books-Search",
+                    img: "assets/images/google-books-search-screenshot.JPG",
+                    link: "https://google-book-search-sc.herokuapp.com/",
+                    github: "https://github.com/schoe14/Google-Books-Search",
+                    detail: "Books have the power to inspire and motivate us with stories of people who have made something of themselves despite the odds. Whether it is the heroics of a fictional character or the real-life accomplishments of someone remarkable from history, books encourage us never to give up, keep moving forward, and stay positive. 📚 Book search application with React will help you find a right book to read!"
+                },
+                {
                     title: "Employee-Directory",
                     img: "assets/images/employee-directory-screenshot.JPG",
                     link: "https://employee-directory-sc.herokuapp.com/",
@@ -62,12 +69,12 @@ export default {
     getSkills: new Promise(function (resolve) {
         setTimeout(() => {
             resolve([
-                ["Languages", "Java, JavaScript/jQuery, HTML, CSS"],
+                ["Languages", "JavaScript/jQuery, HTML, CSS, Java"],
                 ["CSS Framework", "Bootstrap, Materialize"],
-                ["Browser Based Technologies", "Responsive Design, Handlebars, Local Storage, IndexedDB"],
+                ["Browser Based Technologies", "React, Responsive Design, Handlebars, Local Storage, IndexedDB, Cache"],
                 ["Databases", "MongoDB, MySQL"],
                 ["Deployment", "Heroku, Git"],
-                ["Server-Side Deployment", "Express.js, Node.js, User Authentication, MERN Stack"],
+                ["Server-Side Deployment", "MERN Stack, Express.js, Node.js, User Authentication"],
                 ["Other Skills", "Analytical Skills, Problem Solving, Time Management, Technical Mindset, Teamwork"]
             ]);
         }, 100);
@@ -84,8 +91,8 @@ export default {
                     label: "Pack-It"
                 },
                 {
-                    demo: "assets/demo/employee-directory-demo.gif",
-                    label: "Employee-Directory"
+                    demo: "assets/demo/google-book-search-demo.gif",
+                    label: "Google-Books-Search"
                 }
             ])
         }, 100);
